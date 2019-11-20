@@ -1,9 +1,7 @@
 package com.example.admin;
-import com.example.admin.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import android.content.Context;
-import android.net.Uri;
+
 import android.os.Bundle;
 import android.widget.Button;
 import androidx.fragment.app.Fragment;
@@ -35,7 +33,7 @@ public class Form extends Fragment {
             public void onClick(View v) {
                 addForm();
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container,new QuestionFragment());
+                fr.replace(R.id.fragment_container,new AddQuestion());
                 fr.commit();
             }
         });
